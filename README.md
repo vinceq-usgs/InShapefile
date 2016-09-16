@@ -12,7 +12,7 @@ pip install shapely
 
 USAGE
 
-from inShapefile import loadShapefile,transformCoords,nativeProj
+from readshapefile import loadShapefile,transformCoords
 
 # Returns a shapely MultiPolygon
 polyshape=loadShapefile('someshape.shp')
@@ -20,7 +20,7 @@ polyshape=loadShapefile('someshape.shp')
 # Returns a shapely Point
 point=transformCoords(lat,lon)
 
-# obj.intersects() from shapely
+# obj.intersects() method from shapely
 if polyshape.intersects(point):
 	print('Yes, inside someshape!')
 
